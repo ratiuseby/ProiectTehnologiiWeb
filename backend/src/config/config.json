@@ -1,18 +1,18 @@
 {
   "development": {
-    "username": "postgres",
-    "password": null,
-    "database": "devdb",
-    "host": "127.0.0.1",
-    "port": 32768,
+    "username": "ecxrycxc",
+    "password": "33wvoPRC0yqyOxpmnhdpDT575saK4P7X",
+    "database": "ecxrycxc",
+    "host": "baasu.db.elephantsql.com",
+    "port": 5432,
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": null,
-    "database": "devdb",
-    "host": "127.0.0.1",
-    "port": 32768,
+    "username": "ecxrycxc",
+    "password": "33wvoPRC0yqyOxpmnhdpDT575saK4P7X",
+    "database": "ecxrycxc",
+    "host": "baasu.db.elephantsql.com",
+    "port": 5432,
     "dialect": "postgres"
   }
 }
