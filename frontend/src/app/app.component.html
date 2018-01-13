@@ -1,16 +1,4 @@
-<div class="ui top fixed menu inverted large">
-  <a class="item" (click)="sidebar.toggle()">
-    <i class="sidebar icon"></i> Menu
-  </a>
-</div>
-<sui-sidebar-container class="ui bottom attached segment">
-  <sui-sidebar class="inverted vertical" #sidebar>
-    <a class="item">Login</a>
-    <a class="item">Register</a>
-    <a class="item">About</a>
 
-  </sui-sidebar>
-  <sui-sidebar-sibling [isDimmedWhenVisible]="true">
-    <router-outlet></router-outlet>
-  </sui-sidebar-sibling>
-</sui-sidebar-container>
+<router-outlet></router-outlet>
+
+
