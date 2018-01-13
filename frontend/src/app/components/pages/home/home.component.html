@@ -1,5 +1,46 @@
-<div class="container">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+<script src="app.js"></script>
+
+<style>
+
+.center {
+        width: 200px;
+        height: 600px;
+
+        position:absolute; 
+        left:0; right:0;
+        top:0; bottom:0;
+        margin:auto;
+
+        max-width:100%;
+        max-height:100%;
+        overflow:auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+button {
+    margin:0 auto;
+    display:block;
+}
+</style>
+
+<div class="text-center">
   <p>
-    Welcome {{user}}!
+    Welcome to the page! Login to start shopping.
   </p>
 </div>
+
+<div class="center">
+  <input type="text" ng-model="main.username" placeholder="username"><br>
+  <input type="password" ng-model="main.password" placeholder="password"><br>
+<br>
+
+  <button ng-click="main.login()">Login</button>
+
+</div>
+
+
+
