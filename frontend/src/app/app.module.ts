@@ -20,7 +20,7 @@ import { HomeComponent, NavbarComponent } from './components';
 import { fakeBackendProvider } from './service';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 
 @NgModule({
   declarations: [
