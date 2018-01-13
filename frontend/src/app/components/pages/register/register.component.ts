@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit() {
+  }
+
+  register(username,password,confirmPassword)
+  {
+    console.log(username+" "+password+" "+confirmPassword);
+    this.route.navigateByUrl('/home');
+
   }
 
 }

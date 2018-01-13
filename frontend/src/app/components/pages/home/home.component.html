@@ -50,11 +50,11 @@ button {
 </div>
 
 <div class="center">
-  <input type="text" class="form-control" id="usr" placeholder="Username"><br>
-  <input type="password" class="form-control" id="pwd" placeholder="Password"><br>
+  <input type="text" #username class="form-control" id="usr" placeholder="Username" required><br>
+  <input type="password" #password class="form-control" id="pwd" placeholder="Password" required><br>
 <br>
 
-<button type="button" class="btn btn-dark">Login</button>
+<button type="button" class="btn btn-dark" (click)="login(username.value,password.value)">Login</button>
 
 </div>
 

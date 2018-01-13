@@ -21,13 +21,15 @@ import { fakeBackendProvider } from './service';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 import { RegisterComponent } from './components/pages/register/register.component';
+import { MainPageComponent } from './components/pages/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    MainPageComponent
   ],
   imports: [
     AppRoutingModule,

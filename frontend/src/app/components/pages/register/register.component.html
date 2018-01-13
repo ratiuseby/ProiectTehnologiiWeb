@@ -1,3 +1,64 @@
-<p>
-  register works!
-</p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<style>
+
+.center {
+        width: 200px;
+        height: 600px;
+
+        position:absolute; 
+        left:0; right:0;
+        top:0; bottom:0;
+        margin:auto;
+
+        max-width:100%;
+        max-height:100%;
+        overflow:auto;
+}
+
+.text-center{
+  text-align: center;
+  vertical-align: text-top;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+button {
+    margin:0 auto;
+    display:block;
+}
+
+
+</style>
+
+
+
+<body style="background-color:rgb(149, 82, 81);">
+
+
+<div>
+  <p class="text-center">
+    Register
+  </p>
+</div>
+
+<div class="center">
+  <input type="text" #username class="form-control" id="usr" placeholder="Username" required><br>
+  <input type="password" #password class="form-control" id="pwd" placeholder="Password" required><br>
+  <input type="password" #confirmPassword class="form-control" id="confpwd" placeholder="Confirm Password" required><br>
+<br>
+
+<button type="button" class="btn btn-dark" (click)="register(username.value,password.value,confirmPassword.value)">Login</button>
+
+</div>
+
+
+
+</body>
