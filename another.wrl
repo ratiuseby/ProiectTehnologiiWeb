@@ -1,0 +1,51 @@
+#VRML V2.0 utf8
+# The VRML 2.0 Sourcebook
+# Copyright (c) 1997
+# Andrea L. Ames, David R. Nadeau, and John L. Moreland
+
+Group {
+    children [
+    # Rotating Cube
+        DEF Cube Transform {
+            children Shape {
+                appearance Appearance {
+					texture ImageTexture { url [ "http://catplanet.org/wp-content/uploads/2014/11/I-did-a-computer-programming.jpg" ] }
+                    material Material { 
+						emissiveColor  0.749, 0.070, 0.070
+					}
+                }
+                geometry Box { }
+            }
+        },
+    # Sensor
+		DEF Touch TouchSensor { },
+    # Animation clock
+		DEF Clock TimeSensor { cycleInterval 4.0 },
+    # Animation path
+		DEF CubePath OrientationInterpolator {
+			key [ 0.0, 0.50, 1.0 ]
+			keyValue [
+				0.0 1.0 0.0  0.0,
+				0.0 1.0 0.0  3.14,
+				0.0 1.0 0.0  6.28
+			]
+		}
+			
+		DEF CLOCK TimeSensor {
+			cycleInterval 2.0
+			loop TRUE
+		}
+		  DEF BALLSIZE PositionInterpolator {
+			key [ 0.0 0.2 0.65 1.0 ]
+			keyValue [ 1.0 1.0 1.0 1.5 1.5 1.5 1.1 1.1 1.1 1.0 1.0 1.0 ]
+		  }
+		]
+}
+Background { skyColor 0.109, 0.368, 0.450}
+
+ROUTE Touch.touchTime        TO Clock.set_startTime
+ROUTE Clock.fraction_changed TO CubePath.set_fraction
+ROUTE CubePath.value_changed TO Cube.set_rotation
+
+ROUTE CLOCK.fraction_changed TO BALLSIZE.set_fraction
+ROUTE BALLSIZE.value_changed TO Cube.set_scale
