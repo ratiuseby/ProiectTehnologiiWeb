@@ -17,7 +17,16 @@ export class HomeComponent implements OnInit {
   
   login(username,password){
     console.log(username+" "+password);
-    this.route.navigateByUrl('/main-page');
+    this.apiService.get('api/users/verifUser/'+username+"&"+password).subscribe(res =>{
+      console.log(res);
+      if(res!='404')
+        this.route.navigateByUrl('/main-page');
+      else
+        if(res=='User Not Found')
+        alert("Wrong credentials");
+
+    });
+    
   }
 
   private _opened: boolean = false;
