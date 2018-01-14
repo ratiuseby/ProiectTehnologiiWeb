@@ -24,6 +24,7 @@ import { BaseRequestOptions } from '@angular/http';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { MainPageComponent } from './components/pages/main-page/main-page.component';
 import { AboutComponent } from './components/pages/about/about.component';
+import { ContactUsComponent } from './components/pages/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AboutComponent } from './components/pages/about/about.component';
     NavbarComponent,
     RegisterComponent,
     MainPageComponent,
-    AboutComponent
+    AboutComponent,
+    ContactUsComponent
   ],
   imports: [
     AppRoutingModule,
