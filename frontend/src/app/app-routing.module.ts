@@ -1,7 +1,7 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent , NavbarComponent, RegisterComponent, MainPageComponent } from './components';
+import { HomeComponent , NavbarComponent, RegisterComponent, MainPageComponent, AboutComponent } from './components';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
@@ -12,6 +12,9 @@ const routes: Routes = [
   },
   {
     path: 'main-page', component: MainPageComponent
+  },
+  {
+    path: 'about',component: AboutComponent
   }
   // otherwise redirect to home
   // { path: '**', redirectTo: '/' }

@@ -20,4 +20,10 @@ export class HomeComponent implements OnInit {
     this.route.navigateByUrl('/main-page');
   }
 
+  private _opened: boolean = false;
+ 
+  private _toggleSidebar() {
+    this._opened = !this._opened;
+  }
+
 }

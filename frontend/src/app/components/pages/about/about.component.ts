@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.less']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.less']
 })
-export class MainPageComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
   constructor() { }
 
@@ -17,4 +17,5 @@ export class MainPageComponent implements OnInit {
   private _toggleSidebar() {
     this._opened = !this._opened;
   }
+
 }

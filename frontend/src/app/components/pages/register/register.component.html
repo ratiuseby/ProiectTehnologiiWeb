@@ -42,6 +42,21 @@ button {
 
 <body style="background-color:rgb(149, 82, 81);">
 
+    <ng-sidebar-container>
+        <ng-sidebar  [(opened)]="_opened">
+            <p>Login</p>
+            <p>Register</p>
+            <p>About</p>
+          </ng-sidebar>
+     
+          <!-- Page content -->
+    
+          <div ng-sidebar-content>
+              
+              <button (click)="_toggleSidebar()">Toggle sidebar</button>
+          </div>
+          
+    </ng-sidebar-container>
 
 <div>
   <p class="text-center">
@@ -55,7 +70,7 @@ button {
   <input type="password" #confirmPassword class="form-control" id="confpwd" placeholder="Confirm Password" required><br>
 <br>
 
-<button type="button" class="btn btn-dark" (click)="register(username.value,password.value,confirmPassword.value)">Login</button>
+<button type="button" class="btn btn-dark" (click)="register(username.value,password.value,confirmPassword.value)">Register</button>
 
 </div>
 
