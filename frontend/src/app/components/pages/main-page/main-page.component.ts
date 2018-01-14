@@ -13,7 +13,15 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.apiService.get('api/items/').subscribe(res => {
+      for (var i=0;i<res.length;i++)
+      {
+        console.log(res[i]);
+        this.items.push(res[i]);
+      }
+      console.log('aici');
+      console.log(res.length);
+    });
   }
 
   private _opened: boolean = false;
@@ -29,18 +37,7 @@ export class MainPageComponent implements OnInit {
   static loggedUser="";
 
 
-refresh()
-{
-  this.apiService.get('api/items/').subscribe(res => {
-    for (var i=0;i<res.length;i++)
-    {
-      console.log(res[i]);
-      this.items.push(res[i]);
-    }
-    console.log('aici');
-    console.log(res.length);
-  });
-}
+
   
 
 }
