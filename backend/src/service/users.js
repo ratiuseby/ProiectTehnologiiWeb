@@ -40,7 +40,7 @@ exports.delete = function (req, res) {
 };
 
 
-exports.verifUser= function (req, res) {
+exports.verifUser = function (req, res) {
   
   let username = req.params.username;
   let password = req.params.password;
