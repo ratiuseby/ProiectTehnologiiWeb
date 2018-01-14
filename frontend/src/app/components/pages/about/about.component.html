@@ -3,9 +3,13 @@
 
 <ng-sidebar-container>
         <ng-sidebar  [(opened)]="_opened">
-            <p>Login</p>
-            <p>Register</p>
-            <p>About</p>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-dark" onclick="location.href='/main-page';">Shop</button>
+                <button type="button" class="btn btn-dark" onclick="location.href='/home';">Login</button>
+                <button type="button" class="btn btn-dark" onclick="location.href='/register';">Register</button>
+                <button type="button" class="btn btn-dark" onclick="location.href='/about';">About</button>
+                <button type="button" class="btn btn-dark" onclick="location.href='/contact-us';">Contact us</button>
+              </div>
           </ng-sidebar>
      
           <!-- Page content -->

@@ -1,18 +1,23 @@
-<div class="ui top fixed menu inverted large">
-    <a class="item" (click)="sidebar.toggle()">
-      <i class="sidebar icon"></i> Menu
-    </a>
-  </div>
-  <sui-sidebar-container class="ui bottom attached segment">
-    <sui-sidebar class="inverted vertical" #sidebar>
-      <a class="item">Home</a>
-      <a class="item">User</a>
-    </sui-sidebar>
-    <sui-sidebar-sibling [isDimmedWhenVisible]="true">
-      <router-outlet></router-outlet>
-    </sui-sidebar-sibling>
-  </sui-sidebar-container>
+<ng-sidebar-container>
+    <ng-sidebar  [(opened)]="_opened">
+      <div class="btn-group-vertical">
+          <button type="button" class="btn btn-dark" onclick="location.href='/main-page';">Shop</button>
+          <button type="button" class="btn btn-dark" onclick="location.href='/home';">Login</button>
+          <button type="button" class="btn btn-dark" onclick="location.href='/register';">Register</button>
+          <button type="button" class="btn btn-dark" onclick="location.href='/about';">About</button>
+          <button type="button" class="btn btn-dark" onclick="location.href='/contact-us';">Contact us</button>
+      </div>
+      </ng-sidebar>
+ 
+      <!-- Page content -->
 
-<p>
-  contact-us works!
-</p>
+      <div ng-sidebar-content>
+          <p>
+              contact-us works!
+            </p>
+          <button (click)="_toggleSidebar()">Toggle sidebar</button>
+      </div>
+      
+</ng-sidebar-container>
+
+
