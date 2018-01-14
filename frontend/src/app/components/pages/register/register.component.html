@@ -34,6 +34,12 @@ button {
     margin:0 auto;
     display:block;
 }
+.bottom {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:20px;
+   }   /* Height of the footer */
 
 
 </style>
@@ -58,6 +64,12 @@ button {
           <div ng-sidebar-content>
               
               <button (click)="_toggleSidebar()">Toggle sidebar</button>
+              <footer class="bottom">
+                  <p>
+                    Pintiliciuc Octavian, Ratiu Sebastian, 2018
+                  </p>
+                
+                </footer>
           </div>
           
     </ng-sidebar-container>

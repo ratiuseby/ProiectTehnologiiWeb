@@ -35,6 +35,13 @@ button {
     display:block;
 }
 
+.bottom {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:20px;   /* Height of the footer */
+   
+}
 
 </style>
 
@@ -61,6 +68,12 @@ button {
               Welcome to the page! Login to start shopping.
             </p>
           <button (click)="_toggleSidebar()">Toggle sidebar</button>
+          <footer class="bottom">
+              <p>
+                Pintiliciuc Octavian, Ratiu Sebastian, 2018
+              </p>
+            
+            </footer>
       </div>
       
 </ng-sidebar-container>
@@ -71,6 +84,8 @@ button {
 <br>
 
 <button type="button" class="btn btn-dark" (click)="login(username.value,password.value)">Login</button>
+
+
 
 </div>
 
