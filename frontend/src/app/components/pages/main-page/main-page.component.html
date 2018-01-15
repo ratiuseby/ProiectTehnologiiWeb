@@ -18,11 +18,21 @@
      max-width:100%;
      max-height:100%;
      overflow:auto;
+    }
+     .right{
+      float: right;
+     }
+
+     .text-center{
+  text-align: center;
+  vertical-align: text-top;
+  font-family: 'Roboto', sans-serif;
+
 }
+
 </style>
 
 <body style="background-color:rgb(149, 82, 81);">
-
 
 <ng-sidebar-container>
     <ng-sidebar  [(opened)]="_opened">
@@ -37,18 +47,36 @@
  
       <!-- Page content -->
 
-      <div ng-sidebar-content class="center">
-            <p>
-                    Welcome.
-                  </p>
-          <button (click)="_toggleSidebar()">Toggle sidebar</button>
+      <div ng-sidebar-content >
+            
+        <div class="text-center">
+          <p>
+            Welcome.
+          </p>
+        </div>
+
+        <div class="right">
+          
+            
+          <button (click)="_toggleSidebar()">Menu</button>
+          <button (click)="checkout(price)">Checkout</button>
+        </div>
+
+        <div class="text-center">
+          <p>
+            Total cost {{price}} lei.
+          </p>
+        </div>
           
 
-
+          <div class="center">
+            
+          
           <div class="list-group">
               
-              <a  class="list-group-item list-group-item-action" *ngFor="let item of items">{{item}}</a>
+              <a  class="list-group-item list-group-item-action"  *ngFor="let item of items" (click)="addItem(item.price)">{{item.name}} {{item.price}} lei</a>
 
+            </div>
             </div>
 
            

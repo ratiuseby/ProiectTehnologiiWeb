@@ -36,8 +36,29 @@ export class MainPageComponent implements OnInit {
 
   static loggedUser="";
 
+  price:Number=0;
 
 
+addItem(itemTest)
+{
+  this.price+=itemTest;
+  console.log(this.price);
+}
+
+checkout(checkoutPrice)
+{
+  console.log("factura "+this.price+" lei");
+
+  var invoice={
+    idUser:5,
+    sum:checkoutPrice
+
+  }
+  this.apiService.post('api/invoices',invoice).subscribe(res=>{
+    console.log(res);
+  });
+  alert("Total price "+this.price+" lei. Thank you for purchasing!");
+}
   
 
 }
