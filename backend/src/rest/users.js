@@ -7,5 +7,6 @@ router.get('/:id', users.findById);
 router.get('/delete/:id', users.delete);
 router.post('/', users.create);
 router.put('/:id', users.update);
+router.get('/verifUser/:username&:password', users.verifUser);
 
 module.exports = router;

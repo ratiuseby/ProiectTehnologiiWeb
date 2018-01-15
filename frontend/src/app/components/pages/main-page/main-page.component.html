@@ -5,10 +5,34 @@
    width:100%;
    height:20px;
        }   /* Height of the footer */
+
+   .center {
+     width: 200px;
+     height: 600px;
+
+     position:absolute; 
+     left:0; right:0;
+     top:0; bottom:0;
+     margin:auto;
+
+     max-width:100%;
+     max-height:100%;
+     overflow:auto;
+    }
+     .right{
+      float: right;
+     }
+
+     .text-center{
+  text-align: center;
+  vertical-align: text-top;
+  font-family: 'Roboto', sans-serif;
+
+}
+
 </style>
 
 <body style="background-color:rgb(149, 82, 81);">
-
 
 <ng-sidebar-container>
     <ng-sidebar  [(opened)]="_opened">
@@ -23,19 +47,55 @@
  
       <!-- Page content -->
 
-      <div ng-sidebar-content>
-            <p>
-                    main-page works!
-                  </p>
-          <button (click)="_toggleSidebar()">Toggle sidebar</button>
-          <footer class="bottom">
-                <p>
-                  Pintiliciuc Octavian, Ratiu Sebastian, 2018
-                </p>
+      <div ng-sidebar-content >
+            
+        <div class="text-center">
+          <p>
+            Welcome.
+          </p>
+        </div>
+
+        <div class="right">
+          
+            
+          <button (click)="_toggleSidebar()">Menu</button>
+          <button (click)="checkout(price)">Checkout</button>
+        </div>
+
+        <div class="text-center">
+          <p>
+            Total cost {{price}} lei.
+          </p>
+        </div>
+          
+
+          <div class="center">
+            
+          
+          <div class="list-group">
               
-              </footer>
+              <a  class="list-group-item list-group-item-action"  *ngFor="let item of items" (click)="addItem(item.price)">{{item.name}} {{item.price}} lei</a>
+
+            </div>
+            </div>
+
+           
+
+           
+
+          
       </div>
       
+      
+      
 </ng-sidebar-container>
+<div>
+    <footer class="bottom">
+        <p>
+          Pintiliciuc Octavian, Ratiu Sebastian, 2018, {{user}}
+        </p>
+      
+      </footer>
+</div>
 
 </body>
