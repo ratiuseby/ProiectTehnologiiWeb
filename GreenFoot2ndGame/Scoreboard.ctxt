@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Scoreboard
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Scoreboard\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=text
+comment1.target=Scoreboard(java.lang.String)
+comment2.params=text
+comment2.target=void\ update(java.lang.String)
+numComments=3
